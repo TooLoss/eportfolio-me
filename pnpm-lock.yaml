@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       teletype-ui:
-        specifier: ^0.0.1
-        version: 0.0.1(svelte@5.57.1)
+        specifier: ^0.0.3
+        version: 0.0.3(svelte@5.57.1)
     devDependencies:
       '@sveltejs/adapter-auto':
         specifier: ^8.0.0
@@ -51,6 +51,11 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
+
+  '@lucide/svelte@1.52.0':
+    resolution: {integrity: sha512-bQ8t3IcZxWqAdmdMZPyZEv8Qf+MDgBAf7n43eRQoXyBeLWr8HWToiMIO6vKlHxC/lnMiCDdTzm09hjy92ch46A==}
+    peerDependencies:
+      svelte: ^5
 
   '@oxc-project/types@0.152.0':
     resolution: {integrity: sha512-oM/5rLBm2tPkg0iBgkH/FOeR3PCDpY19GTgAZjMFM8h9WI9VW7cLgzp6nwtarYKmovavIQZ+Fe/RKX/8C8O/Rw==}
@@ -224,6 +229,9 @@ packages:
   cookie@2.0.1:
     resolution: {integrity: sha512-yuToqVvRrj6pfDXREyQAAv8SkAEk/8GS3jQRTiUMm66TVtBYmqQeoEjL2Lmq8Rpo6271vH76InTChTitEAm65w==}
     engines: {node: '>=22'}
+
+  csstype@3.2.3:
+    resolution: {integrity: sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ==}
 
   deepmerge@4.3.1:
     resolution: {integrity: sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A==}
@@ -408,8 +416,8 @@ packages:
     resolution: {integrity: sha512-Uqj49lWKB+iSSnneuwiYYJ7MZgkB+eXr0LXBhv4uDuAkXqnWmq65Sxflfvp0Lc6MdKjMUxGaeOKWJqz5SNiVIA==}
     engines: {node: '>=18'}
 
-  teletype-ui@0.0.1:
-    resolution: {integrity: sha512-Nq3UrlTtsjbff9yINJgqc0lfm/1ZSFXlUUsQE5jdQ24FBTfM+yX7UPRjmstcKc79h7718fio7G3Uc099zZK7Iw==}
+  teletype-ui@0.0.3:
+    resolution: {integrity: sha512-V4scKsDvoWPBTCAE+ri9TIV+hOmv/EtKpHS2OyGz+N5bpWO+ZOZBjLT7rPLO0Rj2Nk9WWQvsUiKsGghjgraKBw==}
     peerDependencies:
       svelte: ^5.0.0
 
@@ -500,6 +508,10 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.6.0
+
+  '@lucide/svelte@1.52.0(svelte@5.57.1)':
+    dependencies:
+      svelte: 5.57.1
 
   '@oxc-project/types@0.152.0': {}
 
@@ -604,6 +616,8 @@ snapshots:
   clsx@2.1.1: {}
 
   cookie@2.0.1: {}
+
+  csstype@3.2.3: {}
 
   deepmerge@4.3.1: {}
 
@@ -773,8 +787,10 @@ snapshots:
     transitivePeerDependencies:
       - '@typescript-eslint/types'
 
-  teletype-ui@0.0.1(svelte@5.57.1):
+  teletype-ui@0.0.3(svelte@5.57.1):
     dependencies:
+      '@lucide/svelte': 1.52.0(svelte@5.57.1)
+      csstype: 3.2.3
       svelte: 5.57.1
 
   tinyglobby@0.2.17:

@@ -2,6 +2,9 @@
 	import favicon from '#lib/assets/favicon.svg';
 	import type { LayoutProps } from './$types';
 
+    import 'teletype-ui/tokens.css';
+    import 'teletype-ui/base.css';
+
 	let { children }: LayoutProps = $props();
 </script>
 

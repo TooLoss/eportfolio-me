@@ -25,6 +25,6 @@
 		"#lib/*": "./src/lib/*"
 	},
 	"dependencies": {
-		"teletype-ui": "^0.0.1"
+		"teletype-ui": "^0.0.3"
 	}
 }

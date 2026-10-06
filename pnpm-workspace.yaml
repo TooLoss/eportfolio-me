@@ -1,4 +1,4 @@
 allowBuilds:
   esbuild: true
 minimumReleaseAgeExclude:
-  - teletype-ui@0.0.1
+  - teletype-ui@0.0.1 || 0.0.2 || 0.0.3
