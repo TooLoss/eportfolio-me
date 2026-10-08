@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       teletype-ui:
-        specifier: ^0.0.3
-        version: 0.0.3(svelte@5.57.1)
+        specifier: ^0.0.6
+        version: 0.0.6(svelte@5.57.1)
     devDependencies:
       '@sveltejs/adapter-auto':
         specifier: ^8.0.0
@@ -416,8 +416,8 @@ packages:
     resolution: {integrity: sha512-Uqj49lWKB+iSSnneuwiYYJ7MZgkB+eXr0LXBhv4uDuAkXqnWmq65Sxflfvp0Lc6MdKjMUxGaeOKWJqz5SNiVIA==}
     engines: {node: '>=18'}
 
-  teletype-ui@0.0.3:
-    resolution: {integrity: sha512-V4scKsDvoWPBTCAE+ri9TIV+hOmv/EtKpHS2OyGz+N5bpWO+ZOZBjLT7rPLO0Rj2Nk9WWQvsUiKsGghjgraKBw==}
+  teletype-ui@0.0.6:
+    resolution: {integrity: sha512-Spj9aBJFiZ/3CY6tBTKALIaxEv6V3yL6A2n3ujU8bHiEIfW2ndM1zmP82wPhVirgnwXXq/gxeX8ci8TtsNH1+Q==}
     peerDependencies:
       svelte: ^5.0.0
 
@@ -787,7 +787,7 @@ snapshots:
     transitivePeerDependencies:
       - '@typescript-eslint/types'
 
-  teletype-ui@0.0.3(svelte@5.57.1):
+  teletype-ui@0.0.6(svelte@5.57.1):
     dependencies:
       '@lucide/svelte': 1.52.0(svelte@5.57.1)
       csstype: 3.2.3
