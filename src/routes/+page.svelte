@@ -1,7 +1,9 @@
 <script lang="ts">
+    import { SquareArrowOutUpRight } from '@lucide/svelte';
     import { locale, t, type Locale } from '$lib/i18n';
     import { onMount } from 'svelte';
 
+    import Card from '#lib/components/Card.svelte';
     import Social from '#lib/components/Social.svelte';
 
     import {
@@ -32,6 +34,14 @@
             console.error('Failed to load socials:', error);
         }
     });
+
+    function formatDate(year: number, month: number, locale: Locale) {
+        const date = new Date(year, month - 1);
+        return new Intl.DateTimeFormat(locale === 'fr' ? 'fr-FR' : 'en-US', {
+            month: 'short',
+            year: 'numeric'
+        }).format(date);
+    }
 </script>
 
 <Header>
@@ -74,12 +84,70 @@
 
 <Stack>
     <h2>{t('sections.career', $locale)}</h2>
-    <Stack gap="zero">
+    <Stack gap="s1">
+        <Timeline 
+            noline
+            name={t('career.net7', $locale)} 
+            date={`2025 - ${t('education.current', $locale)}`} 
+        >
+            <Flex wrap={false} align="center" gap="s2">
+                <a target="_blank" href="https://net7.dev" aria-label="Lien vers net7">
+                    <img src='/logos/net7-glow.webp' loading="lazy" alt="net7 logo" style="height: 9rem;"/>
+                </a>
+                <div>
+                    <p class="muted">{t('career.net7desc', $locale)}</p>
+                    <Stack paddingVertical="s3" paddingHorizontal="zero">
+                        <ul>
+                            <li class="muted">Full Stack Development (Svelte, SvelteKit)</li>
+                            <li class="muted">DevOps (Kubernetes, Docker, &hellip;)</li>
+                            <li class="muted">SysAdmin (Linux, Nginx, Proxmox, k8s, &hellip;)</li>
+                            <li class="muted">Programming contests (SWERC)</li>
+                        </ul>
+                        <Flex justify="flex-end">
+                            <Button icon={SquareArrowOutUpRight} target="_blank" href="https://net7.dev" variant="secondary">{t('seemore', $locale)}</Button>
+                        </Flex>
+                    </Stack>
+                </div>
+            </Flex>
+        </Timeline>
+
+        <Timeline
+            noline
+            name={t('career.stagenet7', $locale)} 
+            date={`${formatDate(2026, 6, $locale)} - ${formatDate(2026, 7, $locale)}`}
+        >
+            <p class="muted">{t('career.stagenet7desc', $locale)}</p>
+            <Stack paddingVertical="s3" paddingHorizontal="zero">
+                <ul>
+                    <li class="muted">Implemented reactive interfaces using Svelte and built backend application logic.</li>
+                    <li class="muted">Modeled and queried relational databases using PostgreSQL and the Prisma ORM.</li>
+                    <li class="muted">Integrated secure authentication flows via Authentik interfaced with an LDAP directory service.</li>
+                    <li class="muted">Deployed and configured services on self-hosted k8s cluster Kubernetes.</li>
+                </ul>
+                <Flex justify="flex-end">
+                    <Button href="#Projets" variant="secondary">{t('seeprojects', $locale)}</Button>
+                </Flex>
+            </Stack>
+        </Timeline>
+
+        <Timeline
+            noline
+            name={t('career.prof', $locale)} 
+            date={`2024 - ${t('education.current', $locale)}`} 
+            description={t('career.profdesc', $locale)}
+        >
+        </Timeline>
     </Stack>
 </Stack>
 
-<Stack>
+<Stack id="Projets">
     <h2>{t('sections.projects', $locale)}</h2>
+
+    <Flex>
+        <Card
+            name="Test"
+        />
+    </Flex>
 </Stack>
 
 <Stack>

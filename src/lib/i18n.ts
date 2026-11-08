@@ -26,7 +26,17 @@ const translations = {
             prepa: "Classes préparatoires aux grandes écoles (CPGE) · MPSI/MP",
             prepadesc: "Formation supérieure intensive et pluridisciplinaire en mathématiques, physique et sciences industrielles, préparant aux concours nationaux d'entrée aux Grandes Écoles d'ingénieurs.",
             bac: "Baccalauréat - Mathématiques, Physique-Chimie, NSI · Mention Très Bien",
-        }
+        },
+        career: {
+            net7: "Trésorier du club informatique de l'ENSEEIHT · net7",
+            net7desc: "Maintien des serveurs et infrastructures. Développement de services pour 6 000+ étudiants. Gestion administrative, financière et des achats de l'association.",
+            stagenet7: "Stagiaire en informatique 1ère année · net7",
+            stagenet7desc: "Conception d'applications full-stack pour l'intégration des nouveaux élèves : site des défis, site de parrainage. Mise en ligne et gestion des serveurs.",
+            prof: "Professeur particulier",
+            profdesc: "Accompagnement personnalisé d'élèves du collège au lycée en mathématiques et physique-chimie. Suivi de la progression, remise à niveau et préparation aux examens.",
+        },
+        seeprojects: "Voir les projets",
+        seemore: "Voir plus"
     },
     en: {
         hero: {
@@ -52,7 +62,17 @@ const translations = {
             prepa: "",
             prepadesc: "",
             bac: "French Baccalaureate Mathematics, Physics-Chemistry, Computer Science · Highest Honors",
-        }
+        },
+        career: {
+            net7: "Treasurer of the ENSEEIHT computer club · net7",
+            net7desc: "Maintenance of servers and infrastructure. Development of services for 6,000+ students. Administrative, financial, and procurement management for the association.",
+            prof: "Private Tutor",
+            profdesc: "Provided personalized academic support in mathematics and physics-chemistry for middle and high school students. Monitored student progress, helped bridge knowledge gaps, and prepared them for exams.",
+            stagenet7: "Full-Stack intern at net7",
+            stagenet7desc: "Conception d'applications full-stack pour l'intégration des nouveaux élèves : site des défis, site de parrainage. Mise en ligne, gestion des serveurs.",
+        },
+        seeprojects: "View projects",
+        seemore: "See more"
     },
 } as const;
 

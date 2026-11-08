@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@lucide/svelte':
+        specifier: ^1.70.0
+        version: 1.70.0(svelte@5.57.1)
       teletype-ui:
         specifier: ^0.0.8
         version: 0.0.8(svelte@5.57.1)
@@ -52,8 +55,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@lucide/svelte@1.52.0':
-    resolution: {integrity: sha512-bQ8t3IcZxWqAdmdMZPyZEv8Qf+MDgBAf7n43eRQoXyBeLWr8HWToiMIO6vKlHxC/lnMiCDdTzm09hjy92ch46A==}
+  '@lucide/svelte@1.70.0':
+    resolution: {integrity: sha512-zvx7K/WLxo82c4ZYqbsfcYUPDVFrq4561xH0NHfSHJJbajj0AONTQ14EO095/WnfI4XUEl1tyS/nbjQNNiNxdQ==}
     peerDependencies:
       svelte: ^5
 
@@ -509,7 +512,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.6.0
 
-  '@lucide/svelte@1.52.0(svelte@5.57.1)':
+  '@lucide/svelte@1.70.0(svelte@5.57.1)':
     dependencies:
       svelte: 5.57.1
 
@@ -789,7 +792,7 @@ snapshots:
 
   teletype-ui@0.0.8(svelte@5.57.1):
     dependencies:
-      '@lucide/svelte': 1.52.0(svelte@5.57.1)
+      '@lucide/svelte': 1.70.0(svelte@5.57.1)
       csstype: 3.2.3
       svelte: 5.57.1
 
