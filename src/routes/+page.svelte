@@ -168,11 +168,11 @@
                 description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in mollis leo." 
             />
             <Frame style="flex-grow: 1;">
-                <Flex direction="column">
+                <Flex direction="column" justify="center" style="flex-grow: 1; height: 100%;">
+                    <span>{t('seeprojectsdesc', $locale)}</span>
                     <Button icon={ArrowRight} variant="variant">
                         {t('seeprojects', $locale)}
                     </Button>
-
                 </Flex>
             </Frame>
         </Flex>

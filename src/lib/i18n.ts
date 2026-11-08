@@ -36,6 +36,7 @@ const translations = {
             profdesc: "Accompagnement personnalisé d'élèves du collège au lycée en mathématiques et physique-chimie. Suivi de la progression, remise à niveau et préparation aux examens.",
         },
         seeprojects: "Voir les projets",
+        seeprojectsdesc: "Voir plus de projets.",
         seemore: "Voir plus"
     },
     en: {
@@ -72,6 +73,7 @@ const translations = {
             stagenet7desc: "Conception d'applications full-stack pour l'intégration des nouveaux élèves : site des défis, site de parrainage. Mise en ligne, gestion des serveurs.",
         },
         seeprojects: "View projects",
+        seeprojectsdesc: "See all my projects.",
         seemore: "See more"
     },
 } as const;

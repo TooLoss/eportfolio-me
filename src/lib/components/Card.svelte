@@ -24,7 +24,7 @@
     }: Props = $props();
 </script>
 
-<Frame style="padding: 0; width: 20rem;">
+<Frame style="padding: 0; flex: 1; min-width: 18rem;">
     {#if src}
         <a {href}>
             <img class="showcase" loading="lazy" alt={`${name}-picture`} src={`showcase/${src}.webp`} />
@@ -41,7 +41,10 @@
 
 <style>
     .showcase {
-        width: 20rem;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: block;
     }
 
     .header {
