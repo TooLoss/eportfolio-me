@@ -1,7 +1,8 @@
 <script lang="ts">
-    import { SquareArrowOutUpRight, ArrowRight } from '@lucide/svelte';
+    import { ArrowRight } from '@lucide/svelte';
     import { locale, t, type Locale } from '$lib/i18n';
-    import { onMount } from 'svelte';
+    import type { LayoutData } from './$types';
+    import type { PageData } from './$types';
 
     import TimelineItem from '#lib/components/TimelineItem.svelte';
     import Card from '#lib/components/Card.svelte';
@@ -20,35 +21,17 @@
         typewriter
     } from 'teletype-ui';
 
-    type SocialItem = {
-        name: string;
-        url: string;
-        icon: string;
-    };
+    let { data }: { data: LayoutData } = $props();
 
-    type CareerItem = {
-        name: Parameters<typeof t>[0];
-        description?: Parameters<typeof t>[0];
-        startYear: number;
-        startMonth?: number | null;
-        endYear?: number | null;
-        endMonth?: number | null;
-        current?: boolean;
-        points?: string[];
-        img?: string;
-        url?: string;
-    };
+    const socials = $derived(data.socials);
+    const career = $derived(data.career);
+    const education = $derived(data.education);
+    const volunteering = $derived(data.volunteering);
 
+    type CareerItem = PageData['career'][number];
     type EducationItem = CareerItem;
 
-    type VolunteeringItem = {
-        title: string;
-        date: string;
-        description: Parameters<typeof t>[0];
-        images: string[];
-    };
-
-    function getJsonDate(item: CareerItem, locale: Locale) {
+    function getJsonDate(item: CareerItem | EducationItem, locale: Locale) {
         const start = item.startMonth 
             ? formatDate(item.startYear, item.startMonth, locale) 
             : item.startYear.toString();
@@ -66,38 +49,6 @@
 
         return start;
     }
-
-    let socials = $state<SocialItem[]>([]);
-    let career = $state<CareerItem[]>([]);
-    let education = $state<EducationItem[]>([]);
-    let volunteering = $state<VolunteeringItem[]>([]);
-
-    // load data
-    onMount(async () => {
-        try {
-            const [socialsRes, careerRes, educationRes, volunteeringRes] = await Promise.all([
-                fetch('/data/socials.json'),
-                fetch('/data/career.json'),
-                fetch('/data/education.json'),
-                fetch('/data/volunteering.json')
-            ]);
-
-            if (socialsRes.ok) {
-                socials = await socialsRes.json();
-            }
-            if (careerRes.ok) {
-                career = await careerRes.json();
-            }
-            if (educationRes.ok) {
-                education = await educationRes.json();
-            }
-            if (volunteeringRes.ok) {
-                volunteering = await volunteeringRes.json();
-            }
-        } catch (error) {
-            console.error('Failed to load data:', error);
-        }
-    });
 
     function formatDate(year: number, month: number, locale: Locale) {
         const date = new Date(year, month - 1);
