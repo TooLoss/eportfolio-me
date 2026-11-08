@@ -37,7 +37,14 @@ const translations = {
         },
         interests: {
             graph: "Passionné par le graphisme et la modélisation 3D, je conçois régulièrement des assets visuels et des showcases, dont une sélection est à retrouver sur <a href='https://www.behance.net/loss_' target='_blank' style='text-decoration: underline;'>Behance</a> et <a href='https://sketchfab.com/lossgraph' target='_blank' style='text-decoration: underline;'>Sketchfab</a>. Cette activité créative me permet à la fois de vider mon esprit et de stimuler ma créativité, m'offrant un regard neuf et un angle de vue différent lorsque je suis confronté à des problèmes techniques complexes.",
-            graphnet7: "En tant que membre du bureau (trésorier) de net7 (INP-net), je m'occupe également de la direction artistique, des animations de logo et de la communication visuelle de l'association. Je gère notamment le compte <a href='https://www.instagram.com/net7toulouse/' target='_blank' style='text-decoration: underline;'>Instagram de net7</a>, mettant ma créativité au service de la vie étudiante."
+            graphnet7: "En tant que membre du bureau (trésorier) de net7 (INP-net), je m'occupe également de la direction artistique, des animations de logo et de la communication visuelle de l'association. Je gère notamment le compte <a href='https://www.instagram.com/net7toulouse/' target='_blank' style='text-decoration: underline;'>Instagram de net7</a>, mettant ma créativité au service de la vie étudiante.",
+            volunteeringtitle: "Événements & Bénévolat",
+            volunteeringdesc: "Je participe activement à de nombreux événements tech et open-source, que ce soit en tant que bénévole ou compétiteur. Mes rendez-vous favoris :",
+            volunteering: {
+                cdi: "Participation active en tant que bénévole et animateur lors de l'install party Linux et logiciels libres. Accueil du public, entraide technique et promotion de l'open-source.",
+                thcon: "Investissement dans la communauté cybersécurité. Participation aux conférences, ateliers techniques et échanges avec des professionnels du secteur.",
+                swerc: "Première participation prochaine à cette prestigieuse compétition de programmation algorithmique (SWERC), représentant l'école dans la résolution de problèmes complexes sous contrainte de temps."
+            }
         },
         seeprojects: "Voir les projets",
         seeprojectsdesc: "Voir plus de projets.",
@@ -78,7 +85,14 @@ const translations = {
         },
         interests: {
             graph: "Passionate about graphic design and 3D modeling, I regularly create visual assets and showcases, a selection of which can be found on <a href='https://www.behance.net/loss_' target='_blank' style='text-decoration: underline;'>Behance</a> and <a href='https://sketchfab.com/lossgraph' target='_blank' style='text-decoration: underline;'>Sketchfab</a>. This creative outlet helps clear my mind and boosts my creativity, giving me a fresh perspective and a different angle when tackling complex technical problems.",
-            graphnet7: "As a board member (treasurer) of net7 (INP-net), I also oversee the artistic direction, logo animations, and visual communication for the association. This includes managing the <a href='https://www.instagram.com/net7toulouse/' target='_blank' style='text-decoration: underline;'>net7 Instagram account</a>, bringing creative flair to student life."
+            graphnet7: "As a board member (treasurer) of net7 (INP-net), I also oversee the artistic direction, logo animations, and visual communication for the association. This includes managing the <a href='https://www.instagram.com/net7toulouse/' target='_blank' style='text-decoration: underline;'>net7 Instagram account</a>, bringing creative flair to student life.",
+            volunteeringtitle: "Events & Volunteering",
+            volunteeringdesc: "I actively take part in numerous tech and open-source events, both as a volunteer and a participant. My favorites include:",
+            volunteering: {
+                cdi: "Active involvement as a volunteer and helper during the Linux and open-source installation party. Welcoming attendees, providing technical support, and promoting open-source.",
+                thcon: "Engagement within the cybersecurity community. Attending conferences, technical workshops, and networking with industry professionals.",
+                swerc: "Upcoming first-time participation in this prestigious competitive programming contest (SWERC), representing the school in solving complex algorithmic problems under tight time constraints."
+            }
         },
         seeprojects: "View projects",
         seeprojectsdesc: "See all my projects.",

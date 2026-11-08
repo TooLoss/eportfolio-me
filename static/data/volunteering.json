@@ -1,0 +1,25 @@
+[
+    {
+        "title": "Capitole du Libre",
+        "date": "2024 - 2025",
+        "description": "interests.volunteering.cdi",
+        "images": [
+            "showcase/cdl1.webp"
+        ]
+    },
+    {
+        "title": "THCon",
+        "date": "2025",
+        "description": "interests.volunteering.thcon",
+        "images": [
+            "showcase/thcon1.webp"
+        ]
+    },
+    {
+        "title": "SWERC",
+        "date": "2026 (soon)",
+        "description": "interests.volunteering.swerc",
+        "images": [
+        ]
+    }
+]

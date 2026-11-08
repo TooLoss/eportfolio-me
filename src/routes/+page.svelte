@@ -41,6 +41,13 @@
 
     type EducationItem = CareerItem;
 
+    type VolunteeringItem = {
+        title: string;
+        date: string;
+        description: Parameters<typeof t>[0];
+        images: string[];
+    };
+
     function getJsonDate(item: CareerItem, locale: Locale) {
         const start = item.startMonth 
             ? formatDate(item.startYear, item.startMonth, locale) 
@@ -63,14 +70,16 @@
     let socials = $state<SocialItem[]>([]);
     let career = $state<CareerItem[]>([]);
     let education = $state<EducationItem[]>([]);
+    let volunteering = $state<VolunteeringItem[]>([]);
 
     // load data
     onMount(async () => {
         try {
-            const [socialsRes, careerRes, educationRes] = await Promise.all([
+            const [socialsRes, careerRes, educationRes, volunteeringRes] = await Promise.all([
                 fetch('/data/socials.json'),
                 fetch('/data/career.json'),
-                fetch('/data/education.json')
+                fetch('/data/education.json'),
+                fetch('/data/volunteering.json')
             ]);
 
             if (socialsRes.ok) {
@@ -81,6 +90,9 @@
             }
             if (educationRes.ok) {
                 education = await educationRes.json();
+            }
+            if (volunteeringRes.ok) {
+                volunteering = await volunteeringRes.json();
             }
         } catch (error) {
             console.error('Failed to load data:', error);
@@ -210,6 +222,33 @@
         <div style="width: 70%; margin: auto; margin-top: var(--size-s2)">
             <PictureGroup height="40rem" srcs={["showcase/net7-swerc.webp", "showcase/net7-cdl.webp", "showcase/net7-cdl-2.webp"]} />
         </div>
+
+        <Flex justify="center" style="width: 70%;">
+            <div class="sketchfab-embed-wrapper"> <iframe title="Blastech DH-17 Star Wars Blaster" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/d5f8a98ddf1f45cc8dca359c5521d5ab/embed"> </iframe> </div>
+            <div class="sketchfab-embed-wrapper"> <iframe title="Star Wars Empire Troop Transport | Andor" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/a33a4d5fceb74b929dbabb3cb5506b29/embed"> </iframe> </div>
+            <div class="sketchfab-embed-wrapper"> <iframe title="Blastech B1-NA | Star Wars Blaster" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/a815aa634beb4aba8316b5850c20a00b/embed"> </iframe> </div>
+        </Flex>
+        
+        <h3 style="margin-top: var(--size-s6);">{t('interests.volunteeringtitle', $locale)}</h3>
+        <p>{@html t('interests.volunteeringdesc', $locale)}</p>
+
+        <Stack gap="s1" style="margin-top: var(--size-s3);">
+            {#each volunteering as v}
+                <div>
+                    <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                        <h4 style="font-size: 2rem; margin: 0;">{v.title}</h4>
+                        <span class="muted" style="font-weight: normal; font-size: 0.9rem;">{v.date}</span>
+                    </div>
+                    <p class="muted">{@html t(v.description as any, $locale)}</p>
+                    
+                    {#if v.images && v.images.length > 0}
+                        <div style="width: 70%; margin: auto; margin-top: var(--size-s2)">
+                            <PictureGroup height="20rem" srcs={v.images} />
+                        </div>
+                    {/if}
+                </div>
+            {/each}
+        </Stack>
     </Stack>
 </Stack>
 
