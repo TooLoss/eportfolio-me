@@ -1,8 +1,15 @@
 <script lang="ts">
-    import { Frame, Flex } from 'teletype-ui';
+    import { locale, t, type Locale } from '$lib/i18n';
+    import { Frame, Flex, Button } from 'teletype-ui';
+
+    interface Stack {
+        text: string;
+        icon?: string;
+    }
 
     interface Props {
         name: string;
+        stacks?: Stack[];
         description?: string;
         src?: string;
         href?: string;
@@ -10,14 +17,41 @@
 
     let {
         name,
-        description,
+        stacks = [],
+        description = '',
         src,
-        href
-    }: Prosp = $props();
+        href = ''
+    }: Props = $props();
 </script>
 
-<Frame>
-    <Flex direction="column">
-        <span><b>{name}</b></span>
+<Frame style="padding: 0; width: 20rem;">
+    {#if src}
+        <a {href}>
+            <img class="showcase" loading="lazy" alt={`${name}-picture`} src={`showcase/${src}.webp`} />
+        </a>
+    {/if}
+    <Flex direction="column" padding="s2">
+        <span class="header"><b>{name}</b></span>
+        <span class="muted">{description}</span>
+        <Flex justify="flex-end">
+            <Button {href} variant="variant">{t('seemore', $locale)}</Button>
+        </Flex>
     </Flex>
 </Frame>
+
+<style>
+    .showcase {
+        width: 20rem;
+    }
+
+    .header {
+        font-family: 'Space Mono';
+        font-size: 1.5rem;
+    }
+
+    .muted {
+        text-align: justify;
+        text-justify: inter-word;
+        color: var(--text-muted);
+    }
+</style>

@@ -1,0 +1,40 @@
+[
+    {
+        "name": "career.net7",
+        "description": "career.net7desc",
+        "startYear": 2025,
+        "startMonth": null,
+        "current": true,
+        "points": [
+            "Full Stack Development (Svelte, SvelteKit)",
+            "DevOps (Kubernetes, Docker, &hellip;)",
+            "SysAdmin (Linux, Nginx, Proxmox, k8s, &hellip;)",
+            "Programming contests (SWERC)"
+        ],
+        "img": "/logos/net7-glow.webp",
+        "url": "https://net7.dev"
+    },
+    {
+        "name": "career.stagenet7",
+        "description": "career.stagenet7desc",
+        "startYear": 2026,
+        "startMonth": 6,
+        "endYear": 2026,
+        "endMonth": 7,
+        "current": false,
+        "points": [
+            "Implemented reactive interfaces using Svelte and built backend application logic.",
+            "Modeled and queried relational databases using PostgreSQL and the Prisma ORM.",
+            "Integrated secure authentication flows via Authentik interfaced with an LDAP directory service.",
+            "Deployed and configured services on self-hosted k8s cluster Kubernetes."
+        ],
+        "url": "#Projects"
+    },
+    {
+        "name": "career.prof",
+        "description": "career.profdesc",
+        "startYear": 2024,
+        "startMonth": null,
+        "current": true
+    }
+]

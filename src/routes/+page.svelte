@@ -1,8 +1,9 @@
 <script lang="ts">
-    import { SquareArrowOutUpRight } from '@lucide/svelte';
+    import { SquareArrowOutUpRight, ArrowRight } from '@lucide/svelte';
     import { locale, t, type Locale } from '$lib/i18n';
     import { onMount } from 'svelte';
 
+    import TimelineItem from '#lib/components/TimelineItem.svelte';
     import Card from '#lib/components/Card.svelte';
     import Social from '#lib/components/Social.svelte';
 
@@ -14,7 +15,9 @@
         Button,
         TableOfContents,
         Timeline,
-        hackreveal
+        Frame,
+        hackreveal,
+        typewriter
     } from 'teletype-ui';
 
     type SocialItem = {
@@ -23,15 +26,64 @@
         icon: string;
     };
 
+    type CareerItem = {
+        name: Parameters<typeof t>[0];
+        description?: Parameters<typeof t>[0];
+        startYear: number;
+        startMonth?: number | null;
+        endYear?: number | null;
+        endMonth?: number | null;
+        current?: boolean;
+        points?: string[];
+        img?: string;
+        url?: string;
+    };
+
+    type EducationItem = CareerItem;
+
+    function getJsonDate(item: CareerItem, locale: Locale) {
+        const start = item.startMonth 
+            ? formatDate(item.startYear, item.startMonth, locale) 
+            : item.startYear.toString();
+
+        if (item.current) {
+            return `${start} - ${t('education.current', locale)}`;
+        }
+
+        if (item.endYear) {
+            const end = item.endMonth 
+                ? formatDate(item.endYear, item.endMonth, locale) 
+                : item.endYear.toString();
+            return `${start} - ${end}`;
+        }
+
+        return start;
+    }
+
     let socials = $state<SocialItem[]>([]);
+    let career = $state<CareerItem[]>([]);
+    let education = $state<EducationItem[]>([]);
 
     // load data
     onMount(async () => {
         try {
-            const response = await fetch('/data/socials.json');
-            socials = await response.json();
+            const [socialsRes, careerRes, educationRes] = await Promise.all([
+                fetch('/data/socials.json'),
+                fetch('/data/career.json'),
+                fetch('/data/education.json')
+            ]);
+
+            if (socialsRes.ok) {
+                socials = await socialsRes.json();
+            }
+            if (careerRes.ok) {
+                career = await careerRes.json();
+            }
+            if (educationRes.ok) {
+                education = await educationRes.json();
+            }
         } catch (error) {
-            console.error('Failed to load socials:', error);
+            console.error('Failed to load data:', error);
         }
     });
 
@@ -83,118 +135,78 @@
 </Color>
 
 <Stack>
-    <h2>{t('sections.career', $locale)}</h2>
+    <h2 use:typewriter={{ duration: 1500, inViewOptions: { threshold: 0.5 } }}>
+        {t('sections.career', $locale)}
+    </h2>
     <Stack gap="s1">
-        <Timeline 
-            noline
-            name={t('career.net7', $locale)} 
-            date={`2025 - ${t('education.current', $locale)}`} 
-        >
-            <Flex wrap={false} align="center" gap="s2">
-                <a target="_blank" href="https://net7.dev" aria-label="Lien vers net7">
-                    <img src='/logos/net7-glow.webp' loading="lazy" alt="net7 logo" style="height: 9rem;"/>
-                </a>
-                <div>
-                    <p class="muted">{t('career.net7desc', $locale)}</p>
-                    <Stack paddingVertical="s3" paddingHorizontal="zero">
-                        <ul>
-                            <li class="muted">Full Stack Development (Svelte, SvelteKit)</li>
-                            <li class="muted">DevOps (Kubernetes, Docker, &hellip;)</li>
-                            <li class="muted">SysAdmin (Linux, Nginx, Proxmox, k8s, &hellip;)</li>
-                            <li class="muted">Programming contests (SWERC)</li>
-                        </ul>
-                        <Flex justify="flex-end">
-                            <Button icon={SquareArrowOutUpRight} target="_blank" href="https://net7.dev" variant="secondary">{t('seemore', $locale)}</Button>
-                        </Flex>
-                    </Stack>
-                </div>
-            </Flex>
-        </Timeline>
-
-        <Timeline
-            noline
-            name={t('career.stagenet7', $locale)} 
-            date={`${formatDate(2026, 6, $locale)} - ${formatDate(2026, 7, $locale)}`}
-        >
-            <p class="muted">{t('career.stagenet7desc', $locale)}</p>
-            <Stack paddingVertical="s3" paddingHorizontal="zero">
-                <ul>
-                    <li class="muted">Implemented reactive interfaces using Svelte and built backend application logic.</li>
-                    <li class="muted">Modeled and queried relational databases using PostgreSQL and the Prisma ORM.</li>
-                    <li class="muted">Integrated secure authentication flows via Authentik interfaced with an LDAP directory service.</li>
-                    <li class="muted">Deployed and configured services on self-hosted k8s cluster Kubernetes.</li>
-                </ul>
-                <Flex justify="flex-end">
-                    <Button href="#Projets" variant="secondary">{t('seeprojects', $locale)}</Button>
-                </Flex>
-            </Stack>
-        </Timeline>
-
-        <Timeline
-            noline
-            name={t('career.prof', $locale)} 
-            date={`2024 - ${t('education.current', $locale)}`} 
-            description={t('career.profdesc', $locale)}
-        >
-        </Timeline>
+        {#each career as c}
+            <TimelineItem
+                item={c}
+                locale={$locale}
+                date={getJsonDate(c, $locale)}
+                noline
+            />
+        {/each}
     </Stack>
 </Stack>
 
 <Stack id="Projets">
-    <h2>{t('sections.projects', $locale)}</h2>
+    <h2 use:typewriter={{ duration: 1000, inViewOptions: { threshold: 0.5 } }}>
+        {t('sections.projects', $locale)}
+    </h2>
 
-    <Flex>
-        <Card
-            name="Test"
-        />
-    </Flex>
-</Stack>
+    <Stack>
+        <Flex>
+            <Card
+                name="Defis"
+                src="defis1"
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in mollis leo." 
+            />
+            <Card
+                name="Defis"
+                src="defis1"
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in mollis leo." 
+            />
+            <Frame style="flex-grow: 1;">
+                <Flex direction="column">
+                    <Button icon={ArrowRight} variant="variant">
+                        {t('seeprojects', $locale)}
+                    </Button>
 
-<Stack>
-    <h2>{t('sections.education', $locale)}</h2>
-    <Stack gap="zero">
-        <Timeline 
-            name={t('education.enseeiht', $locale)} 
-            date={`2025 - ${t('education.current', $locale)}`} 
-            description={t('education.enseeihtdesc', $locale)}
-        >
-            <Stack paddingVertical="s5" paddingHorizontal="zero" style="padding-bottom: var(--size-s1);">
-                <p class="muted">{t('education.enseeihtcourse', $locale)}</p>
-                <ul>
-                    <li class="muted">Advanced Object-Oriented Programming (OOP)</li>
-                    <li class="muted">Advanced Functional Programming</li>
-                    <li class="muted">Software Architecture & Design Patterns</li>
-                    <li class="muted">Concurrent and Parallel Programming</li>
-                </ul>
-                <Flex justify="flex-end">
-                    <Button variant="secondary">{t('education.enseeihtbutton', $locale)}</Button>
                 </Flex>
-            </Stack>
-        </Timeline>
-
-        <Timeline 
-            name={t('education.prepa', $locale)} 
-            date="2023 - 2025" 
-            description={t('education.prepadesc', $locale)} 
-        >
-            <br style="height: var(--size-s2)" />
-        </Timeline>
-
-        <Timeline 
-            end 
-            name={t('education.bac', $locale)}
-            date="2023" 
-        />
+            </Frame>
+        </Flex>
     </Stack>
 </Stack>
 
 <Stack>
-    <h2>{t('sections.interests', $locale)}</h2>
+    <h2 use:typewriter={{ duration: 1000, inViewOptions: { threshold: 0.5 } }}>
+        {t('sections.education', $locale)}
+    </h2>
+    <Stack gap="zero">
+        {#each education as e, i}
+            <TimelineItem 
+                item={e} 
+                locale={$locale} 
+                date={getJsonDate(e, $locale)} 
+                end={i === education.length - 1} 
+                spacing="3rem"
+            />
+        {/each}
+    </Stack>
+</Stack>
+
+<Stack>
+    <h2 use:typewriter={{ duration: 1000, inViewOptions: { threshold: 0.5 } }}>
+        {t('sections.interests', $locale)}
+    </h2>
 </Stack>
 
 <Color>
     <Stack>
-        <h2>{t('sections.contacts', $locale)}</h2>
+    <h2>
+        {t('sections.contacts', $locale)}
+    </h2>
     </Stack>
 </Color>
 
@@ -207,25 +219,5 @@
         width: auto;
         object-fit: contain;
         min-height: 0;
-    }
-
-    .muted {
-        color: var(--text-muted)
-    }
-
-    ul {
-        list-style: none;
-        padding-left: 0;
-    }
-
-    li {
-        margin-bottom: 5px;
-    }
-
-    li::before {
-        content: "- ";
-        font-weight: bold;
-        margin-left: var(--size-s2);
-        margin-right: var(--size-s4);
     }
 </style>
