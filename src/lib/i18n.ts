@@ -35,6 +35,10 @@ const translations = {
             prof: "Professeur particulier",
             profdesc: "Accompagnement personnalisé d'élèves du collège au lycée en mathématiques et physique-chimie. Suivi de la progression, remise à niveau et préparation aux examens.",
         },
+        interests: {
+            graph: "Passionné par le graphisme et la modélisation 3D, je conçois régulièrement des assets visuels et des showcases, dont une sélection est à retrouver sur <a href='https://www.behance.net/loss_' target='_blank' style='text-decoration: underline;'>Behance</a> et <a href='https://sketchfab.com/lossgraph' target='_blank' style='text-decoration: underline;'>Sketchfab</a>. Cette activité créative me permet à la fois de vider mon esprit et de stimuler ma créativité, m'offrant un regard neuf et un angle de vue différent lorsque je suis confronté à des problèmes techniques complexes.",
+            graphnet7: "En tant que membre du bureau (trésorier) de net7 (INP-net), je m'occupe également de la direction artistique, des animations de logo et de la communication visuelle de l'association. Je gère notamment le compte <a href='https://www.instagram.com/net7toulouse/' target='_blank' style='text-decoration: underline;'>Instagram de net7</a>, mettant ma créativité au service de la vie étudiante."
+        },
         seeprojects: "Voir les projets",
         seeprojectsdesc: "Voir plus de projets.",
         seemore: "Voir plus"
@@ -71,6 +75,10 @@ const translations = {
             profdesc: "Provided personalized academic support in mathematics and physics-chemistry for middle and high school students. Monitored student progress, helped bridge knowledge gaps, and prepared them for exams.",
             stagenet7: "Full-Stack intern at net7",
             stagenet7desc: "Conception d'applications full-stack pour l'intégration des nouveaux élèves : site des défis, site de parrainage. Mise en ligne, gestion des serveurs.",
+        },
+        interests: {
+            graph: "Passionate about graphic design and 3D modeling, I regularly create visual assets and showcases, a selection of which can be found on <a href='https://www.behance.net/loss_' target='_blank' style='text-decoration: underline;'>Behance</a> and <a href='https://sketchfab.com/lossgraph' target='_blank' style='text-decoration: underline;'>Sketchfab</a>. This creative outlet helps clear my mind and boosts my creativity, giving me a fresh perspective and a different angle when tackling complex technical problems.",
+            graphnet7: "As a board member (treasurer) of net7 (INP-net), I also oversee the artistic direction, logo animations, and visual communication for the association. This includes managing the <a href='https://www.instagram.com/net7toulouse/' target='_blank' style='text-decoration: underline;'>net7 Instagram account</a>, bringing creative flair to student life."
         },
         seeprojects: "View projects",
         seeprojectsdesc: "See all my projects.",

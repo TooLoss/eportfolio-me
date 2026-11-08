@@ -14,7 +14,7 @@
         Flex,
         Button,
         TableOfContents,
-        Timeline,
+        PictureGroup,
         Frame,
         hackreveal,
         typewriter
@@ -169,7 +169,7 @@
             />
             <Frame style="flex-grow: 1;">
                 <Flex direction="column" justify="center" style="flex-grow: 1; height: 100%;">
-                    <span>{t('seeprojectsdesc', $locale)}</span>
+                    <span><b>{t('seeprojectsdesc', $locale)}</b></span>
                     <Button icon={ArrowRight} variant="variant">
                         {t('seeprojects', $locale)}
                     </Button>
@@ -200,6 +200,17 @@
     <h2 use:typewriter={{ duration: 1000, inViewOptions: { threshold: 0.5 } }}>
         {t('sections.interests', $locale)}
     </h2>
+    <Stack>
+        <h3>Art</h3>
+
+        <p>{@html t('interests.graph', $locale)}</p>
+
+        <p>{@html t('interests.graphnet7', $locale)}</p>
+
+        <div style="width: 70%; margin: auto; margin-top: var(--size-s2)">
+            <PictureGroup height="40rem" srcs={["showcase/net7-swerc.webp", "showcase/net7-cdl.webp", "showcase/net7-cdl-2.webp"]} />
+        </div>
+    </Stack>
 </Stack>
 
 <Color>
