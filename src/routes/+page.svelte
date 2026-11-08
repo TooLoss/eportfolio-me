@@ -174,14 +174,14 @@
     <Stack>
         <Flex>
             <Card
-                name="Defis"
-                src="defis1"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in mollis leo." 
+                name="teletype-ui"
+                src="showcase/teletype-ui1.webp"
+                description="A classic computer-science-inspired UI component library designed for developer portfolios, technical showcases, and minimalist web applications." 
             />
             <Card
-                name="Defis"
-                src="defis1"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in mollis leo." 
+                name="Entropix"
+                src="showcase/entropix1.webp"
+                description="Entropix is a 2D grid-based particle simulation game developed in C++." 
             />
             <Frame style="flex-grow: 1;">
                 <Flex direction="column" justify="center" style="flex-grow: 1; height: 100%;">
