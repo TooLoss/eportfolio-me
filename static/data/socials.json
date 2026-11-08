@@ -1,12 +1,12 @@
 [
   {
     "name": "TooLoss",
-    "url": "https://github.com/TooLoss/",
-    "icon": "/icons/github.svg"
+    "icon": "/icons/github.svg",
+    "url": "https://github.com/TooLoss/"
   },
   {
     "name": "bilele-elhaddadi",
-    "url": "https://www.linkedin.com/in/bilele-elhaddadi/",
-    "icon": "/icons/linkedin.svg"
+    "icon": "/icons/linkedin.svg",
+    "url": "https://www.linkedin.com/in/bilele-elhaddadi/"
   }
 ]
