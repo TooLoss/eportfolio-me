@@ -61,6 +61,10 @@
     });
 </script>
 
+<svelte:head>
+    <title>Projects</title> 
+</svelte:head>
+
 <Stack marginVertical="zero">
     <Flex justify="space-between" align="center">
         <h2>{t('sections.projects', $locale)}</h2>

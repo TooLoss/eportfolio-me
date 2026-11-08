@@ -108,6 +108,10 @@
     }
 </script>
 
+<svelte:head>
+    <title>Home</title> 
+</svelte:head>
+
 <Header>
     <Stack gap="s2">
         <Flex direction="row" align="center" justify="space-between" style="flex-wrap: wrap-reverse; width: 100%;">
