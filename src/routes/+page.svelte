@@ -182,7 +182,7 @@
             <Frame style="flex-grow: 1;">
                 <Flex direction="column" justify="center" style="flex-grow: 1; height: 100%;">
                     <span><b>{t('seeprojectsdesc', $locale)}</b></span>
-                    <Button icon={ArrowRight} variant="variant">
+                    <Button href="/projects" icon={ArrowRight} variant="variant">
                         {t('seeprojects', $locale)}
                     </Button>
                 </Flex>

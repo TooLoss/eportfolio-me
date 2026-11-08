@@ -48,7 +48,8 @@ const translations = {
         },
         seeprojects: "Voir les projets",
         seeprojectsdesc: "Voir plus de projets.",
-        seemore: "Voir plus"
+        seemore: "Voir plus",
+        back: "Retour"
     },
     en: {
         hero: {
@@ -96,7 +97,8 @@ const translations = {
         },
         seeprojects: "View projects",
         seeprojectsdesc: "See all my projects.",
-        seemore: "See more"
+        seemore: "See more",
+        back: "Back"
     },
 } as const;
 

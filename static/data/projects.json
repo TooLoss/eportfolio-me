@@ -1,0 +1,34 @@
+[
+    {
+        "id": 0,
+        "name": "Document Scanner from Scratch",
+        "shortdesc": "Developed as part of my TIPE, C++ and Python implementations.",
+        "url": "https://github.com/TooLoss/document-scan-python",
+        "stacks": ["Python", "C++"],
+        "images": ["showcase/tipe1.webp"]
+    },
+    {
+        "id": 1,
+        "name": "Entropix",
+        "shortdesc": "Entropix is a 2D grid-based particle simulation game developed in C++.",
+        "url": "https://github.com/TooLoss/entropix",
+        "stacks": ["C++"],
+        "images": ["showcase/entropix1.webp"]
+    },
+    {
+        "id": 2,
+        "name": "teletype-ui",
+        "shortdesc": "A classic computer-science-inspired UI component library designed for developer portfolios, technical showcases, and minimalist web applications.",
+        "url": "https://github.com/TooLoss/teletype-ui",
+        "stacks": ["Svelte"],
+        "images": ["showcase/teletype-ui1.webp"]
+    },
+    {
+        "id": 3,
+        "name": "gravity-bot",
+        "shortdesc": "Developed in Java by a team of 9 people using the Agile/Scrum methodology, this project is a turn-based strategy and arcade video game with physics satellite. We implemented Agile methodes.",
+        "url": "https://github.com/TooLoss/gravity-bot/",
+        "stacks": [""],
+        "images": ["showcase/gravity-bot1.webp"]
+    }
+]
