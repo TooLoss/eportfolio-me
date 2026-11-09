@@ -45,7 +45,7 @@
                 {#if url}
                     <Button icon={SquareArrowOutUpRight} variant="secondary" href={url} target="_blank">Repository</Button>
                 {/if}
-                <Button {href} variant="variant">{t('seemore', $locale)}</Button>
+                <Button {href} variant="default">{t('seemore', $locale)}</Button>
             </Flex>
         </Flex>
     </Flex>

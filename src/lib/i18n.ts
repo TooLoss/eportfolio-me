@@ -111,7 +111,7 @@ type Leaves<T, D extends string = ''> = T extends object
     ? { [K in keyof T]-?: Leaves<T[K], D extends '' ? `${K & string}` : `${D}.${K & string}`> }[keyof T]
     : D;
 
-export const locale = writable<Locale>('fr');
+export const locale = writable<Locale>('en');
 
 export function t(key: TranslationKey, currentLocale: Locale): string {
     const keys = key.split('.') as (keyof typeof translations.fr)[];

@@ -3,12 +3,16 @@
     import { Button, Flex, Stack } from 'teletype-ui';
     import type { LayoutProps } from './$types';
     import { ArrowLeft } from '@lucide/svelte'
+    import { goto } from '$app/navigation';
 
     let { children }: LayoutProps = $props();
 
+
     function goBack() {
-        if (typeof window !== 'undefined') {
+        if (window.history.length > 1) {
             history.back();
+        } else {
+            goto('/');
         }
     }
 </script>
