@@ -20,16 +20,18 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<div style="max-width: 1200px; margin: 0 auto; position: relative; width: 100%;">
-    <div style="position: absolute; top: 1rem; right: 1rem; z-index: 1000;">
-        <Button variant='secondary' onclick={() => $locale = $locale === 'fr' ? 'en' : 'fr'}>
-            {#if $locale === 'en'}
-                🇫🇷
-            {:else}
-                🇬🇧
-            {/if}
-            Language
-        </Button>
+<div style="position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; pointer-events: none;">
+    <div style="max-width: 1200px; margin: 0 auto; position: relative; width: 100%; pointer-events: auto;">
+        <div style="position: absolute; top: 1rem; right: 1rem;">
+            <Button variant='secondary' onclick={() => $locale = $locale === 'fr' ? 'en' : 'fr'}>
+                {#if $locale === 'en'}
+                    🇫🇷
+                {:else}
+                    🇬🇧
+                {/if}
+                Language
+            </Button>
+        </div>
     </div>
 </div>
 
