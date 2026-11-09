@@ -92,7 +92,7 @@ const translations = {
             volunteeringtitle: "Events & Volunteering",
             volunteeringdesc: "<p>Volunteering is an integral part of the engineering curriculum. At ENSEEIHT, Civic Engagement and the 60 hours of integrated community service provide an opportunity to step out of the classroom, engage with other realities, and develop our sense of commitment and responsibility.</p><p>That is why I actively participate in numerous tech and open-source events as a volunteer. My favorite events:</p>",
             volunteering: {
-                cdi: "Active involvement as a volunteer and helper during the Linux and open-source installation party. Welcoming attendees, providing technical support, and promoting open-source.",
+                cdi: "<p>I participated in both editions of <a href='capitoledulibre.org'>Capitole du Libre</a>. As volunteers, we help set up and ensure the smooth running of the event. Many free software stakeholders hold conferences there.</p><p>More specifically, along with the <a href='[https://net7.dev/](https://net7.dev/)'>net7</a> association, we run an Install Party booth. There, we promote free software, install Linux distributions for the public, and perform electronics repairs.</p>",
                 thcon: "Volunteering in the organization of the THcon. Engagement within the cybersecurity community. Attending conferences, technical workshops, and networking with industry professionals.",
                 swerc: "Upcoming first-time participation in this prestigious competitive programming contest (SWERC), representing the school in solving complex algorithmic problems under tight time constraints."
             }

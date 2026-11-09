@@ -27,8 +27,7 @@
             "Modeled and queried relational databases using PostgreSQL and the Prisma ORM.",
             "Integrated secure authentication flows via Authentik interfaced with an LDAP directory service.",
             "Deployed and configured services on self-hosted k8s cluster Kubernetes."
-        ],
-        "url": "#Projects"
+        ]
     },
     {
         "name": "career.prof",

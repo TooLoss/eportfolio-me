@@ -140,7 +140,7 @@
             <Frame style="flex-grow: 1;">
                 <Flex direction="column" justify="center" style="flex-grow: 1; height: 100%;">
                     <span><b>{t('seeprojectsdesc', $locale)}</b></span>
-                    <Button href="/projects" icon={ArrowRight} variant="variant">
+                    <Button href="/projects" icon={ArrowRight}>
                         {t('seeprojects', $locale)}
                     </Button>
                 </Flex>
@@ -221,10 +221,24 @@
 </Stack>
 
 <Color>
-    <Stack>
-    <h2>
-        {t('sections.contacts', $locale)}
-    </h2>
+    <Stack gap="s2">
+        <Stack paddingVertical="zero" gap="s3">
+            <h2>
+                {t('sections.contacts', $locale)}
+            </h2>
+            <Flex>
+                {#each socials as s}
+                    <Social {...s} />
+                {/each}
+            </Flex>
+        </Stack>
+
+        <Stack paddingVertical="zero" gap="s4">
+            <span><b>Bilèle El Haddadi</b></span>
+            <span class="text-secondary text-sm">
+                Engineering Student at ENSEEIHT • Based in Toulouse, France
+            </span>
+        </Stack>
     </Stack>
 </Color>
 

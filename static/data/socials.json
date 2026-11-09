@@ -8,5 +8,10 @@
     "name": "bilele-elhaddadi",
     "icon": "/icons/linkedin.svg",
     "url": "https://www.linkedin.com/in/bilele-elhaddadi/"
+  },
+  {
+    "name": "bilele.elhaddadi@gmail.com",
+    "icon": "/icons/mail.svg",
+    "url": "mailto:bilele.elhaddadi@gmail.com"
   }
 ]
