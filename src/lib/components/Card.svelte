@@ -1,6 +1,7 @@
 <script lang="ts">
     import { locale, t, type Locale } from '$lib/i18n';
     import { Frame, Flex, Button, Skeleton } from 'teletype-ui';
+    import { SquareArrowOutUpRight, ArrowRight } from '@lucide/svelte';
 
     interface Stack {
         text: string;
@@ -49,9 +50,9 @@
             {:else}
                 <span class="header"><b>{name}</b></span>
                 <span class="muted">{description}</span>
-                <Flex justify="flex-end" gap="s4" style="margin-top: auto; padding-top: 1rem;">
+                <Flex direction="column" justify="flex-end" gap="s4" style="margin-top: auto; padding-top: 1rem;">
                     {#if url}
-                        <Button variant="secondary" href={url} target="_blank">Repository</Button>
+                        <Button icon={SquareArrowOutUpRight} variant="secondary" href={url} target="_blank">Repository</Button>
                     {/if}
                     <Button {href} variant="variant">{t('seemore', $locale)}</Button>
                 </Flex>
