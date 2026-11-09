@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { SquareArrowOutUpRight } from '@lucide/svelte';
+    import { SquareArrowOutUpRight, ArrowRight } from '@lucide/svelte';
     import { t, type Locale } from '$lib/i18n';
     import { Flex, Stack, Button, Timeline } from 'teletype-ui';
 
@@ -24,12 +24,17 @@
     }
 
     let { item, locale, date, end = false, noline = false, spacing = '' }: Props = $props();
+
+    let isExternal = $derived(item.url?.startsWith('http://') || item.url?.startsWith('https://'));
+    
+    let linkTarget = $derived(isExternal ? '_blank' : '_self');
+    let linkIcon = $derived(isExternal ? SquareArrowOutUpRight : ArrowRight);
 </script>
 
 <Timeline name={t(item.name, locale)} {date} {end} {noline}>
     <Flex align="center" gap="s2">
         {#if item.img}
-            <a target="_blank" href={item.url} aria-label={`Lien vers ${t(item.name, locale)}`}>
+            <a target={linkTarget} href={item.url} aria-label={`Lien vers ${t(item.name, locale)}`}>
                 <img src={item.img} loading="lazy" alt="logo" style="height: 9rem;" />
             </a>
         {/if}
@@ -44,14 +49,14 @@
                         {#each item.points as point}
                             <li class="muted">{@html point}</li>
                         {/each}
+                        {#if item.url}
+                            <Flex justify="flex-end">
+                                <Button icon={linkIcon} target={linkTarget} href={item.url} variant="secondary">
+                                    {t('seemore', locale)}
+                                </Button>
+                            </Flex>
+                        {/if}
                     </ul>
-                    {#if item.url}
-                        <Flex justify="flex-end">
-                            <Button icon={SquareArrowOutUpRight} target="_blank" href={item.url} variant="secondary">
-                                {t('seemore', locale)}
-                            </Button>
-                        </Flex>
-                    {/if}
                 </Stack>
             {/if}
         </div>
