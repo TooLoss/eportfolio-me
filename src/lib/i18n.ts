@@ -15,7 +15,8 @@ const translations = {
             projects: "Projets",
             career: "Experience professionnel",
             interests: "Centres d'intérêt",
-            contacts: "Contacts"
+            contacts: "Contacts",
+            mobility: "Mobilité international"
         },
         education: {
             current: "Actuel",
@@ -39,10 +40,10 @@ const translations = {
             graph: "Passionné par le graphisme et la modélisation 3D, je conçois régulièrement des assets visuels et des showcases, dont une sélection est à retrouver sur <a href='https://www.behance.net/loss_' target='_blank' style='text-decoration: underline;'>Behance</a> et <a href='https://sketchfab.com/lossgraph' target='_blank' style='text-decoration: underline;'>Sketchfab</a>. Cette activité créative me permet à la fois de vider mon esprit et de stimuler ma créativité, m'offrant un regard neuf et un angle de vue différent lorsque je suis confronté à des problèmes techniques complexes.",
             graphnet7: "En tant que membre du bureau (trésorier) de net7 (INP-net), je m'occupe également de la direction artistique, des animations de logo et de la communication visuelle de l'association. Je gère notamment le compte <a href='https://www.instagram.com/net7toulouse/' target='_blank' style='text-decoration: underline;'>Instagram de net7</a>, mettant ma créativité au service de la vie étudiante.",
             volunteeringtitle: "Événements & Bénévolat",
-            volunteeringdesc: "Je participe activement à de nombreux événements tech et open-source, que ce soit en tant que bénévole ou compétiteur. Mes rendez-vous favoris :",
+            volunteeringdesc: "<p>Le volontariat fait partie intégrante de la formation d'ingénieur. À l'ENSEEIHT, l'engagement civic et les 60 heures de bénévolat intégrées au cursus sont l'occasion de sortir des salles de cours, de se confronter à d'autres réalités et de développer notre sens de l'engagement et des responsabilités.</p><p>C'est pourquoi, je participe activement à de nombreux événements tech et open-source en tant que bénévole. Mes rendez-vous favoris :</p>",
             volunteering: {
-                cdi: "Participation active en tant que bénévole et animateur lors de l'install party Linux et logiciels libres. Accueil du public, entraide technique et promotion de l'open-source.",
-                thcon: "Investissement dans la communauté cybersécurité. Participation aux conférences, ateliers techniques et échanges avec des professionnels du secteur.",
+                cdi: "<p>J'ai participé aux deux éditions du <a href='capitoledulibre.org'>Capitole du Libre</a>. En tant que bénévoles, nous aidons à installer et à maintenir le bon déroulement de l'événement. De nombreux acteurs du logiciel libre y tiennent des conférences.</p><p>Plus particulièrement, avec l'association <a href='https://net7.dev/'>net7</a>, nous tenons un stand d'Install Party. Nous y promouvons le logiciel libre, installons des distributions Linux pour le public et effectuons des réparations électroniques.</p>",
+                thcon: "Participation à l'organisation de la THcon en tant que bénévole. Participation aux conférences, ateliers techniques et échanges avec des professionnels du secteur.",
                 swerc: "Première participation prochaine à cette prestigieuse compétition de programmation algorithmique (SWERC), représentant l'école dans la résolution de problèmes complexes sous contrainte de temps."
             }
         },
@@ -61,10 +62,11 @@ const translations = {
         },
         sections: {
             education: "Education",
-            projects: "Projects",
+            projects: "Technical Projects",
             career: "Career Development",
             interests: "Interest",
-            contacts: "Contacts"
+            contacts: "Contacts",
+            mobility: "International Mobility"
         },
         education: {
             current: "Present",
@@ -72,9 +74,9 @@ const translations = {
             enseeihtdesc: "Software Engineering Student at ENSEEIHT (l'n7) with a strong passion for software design, clean code, and scalable architecture. Eager to leverage solid theoretical foundations and hands-on project experience in a challenging software development role.",
             enseeihtcourse: "Relevant Coursework at ENSEEIHT (Software Engineering Track):",
             enseeihtbutton: "See more courses",
-            prepa: "",
-            prepadesc: "",
-            bac: "French Baccalaureate Mathematics, Physics-Chemistry, Computer Science · Highest Honors",
+            prepa: "Classes préparatoires aux grandes écoles (CPGE) · MPSI/MP",
+            prepadesc: "Intensive, multidisciplinary higher education program in mathematics, physics, and engineering sciences, preparing for the national competitive entrance exams to top engineering schools (Grandes Écoles).",
+            bac: "French Baccalaureate Mathematics, Physics-Chemistry, CS · Highest Honors",
         },
         career: {
             net7: "Treasurer of the ENSEEIHT computer club · net7",
@@ -88,10 +90,10 @@ const translations = {
             graph: "Passionate about graphic design and 3D modeling, I regularly create visual assets and showcases, a selection of which can be found on <a href='https://www.behance.net/loss_' target='_blank' style='text-decoration: underline;'>Behance</a> and <a href='https://sketchfab.com/lossgraph' target='_blank' style='text-decoration: underline;'>Sketchfab</a>. This creative outlet helps clear my mind and boosts my creativity, giving me a fresh perspective and a different angle when tackling complex technical problems.",
             graphnet7: "As a board member (treasurer) of net7 (INP-net), I also oversee the artistic direction, logo animations, and visual communication for the association. This includes managing the <a href='https://www.instagram.com/net7toulouse/' target='_blank' style='text-decoration: underline;'>net7 Instagram account</a>, bringing creative flair to student life.",
             volunteeringtitle: "Events & Volunteering",
-            volunteeringdesc: "I actively take part in numerous tech and open-source events, both as a volunteer and a participant. My favorites include:",
+            volunteeringdesc: "<p>Volunteering is an integral part of the engineering curriculum. At ENSEEIHT, Civic Engagement and the 60 hours of integrated community service provide an opportunity to step out of the classroom, engage with other realities, and develop our sense of commitment and responsibility.</p><p>That is why I actively participate in numerous tech and open-source events as a volunteer. My favorite events:</p>",
             volunteering: {
                 cdi: "Active involvement as a volunteer and helper during the Linux and open-source installation party. Welcoming attendees, providing technical support, and promoting open-source.",
-                thcon: "Engagement within the cybersecurity community. Attending conferences, technical workshops, and networking with industry professionals.",
+                thcon: "Volunteering in the organization of the THcon. Engagement within the cybersecurity community. Attending conferences, technical workshops, and networking with industry professionals.",
                 swerc: "Upcoming first-time participation in this prestigious competitive programming contest (SWERC), representing the school in solving complex algorithmic problems under tight time constraints."
             }
         },

@@ -67,9 +67,11 @@
     <Stack gap="s2">
         <Flex direction="row" align="center" justify="space-between" style="flex-wrap: wrap-reverse; width: 100%;">
             <Stack style="width: auto; margin: 0;" paddingHorizontal="zero" paddingVertical="zero">
-                <h2 use:hackreveal={{ duration: 1500, inViewOptions: { threshold: 0.5 } }}>
-                    {t('hero.greeting', $locale)}
-                </h2>
+                {#key $locale}
+                    <h2 use:hackreveal={{ duration: 1500, inViewOptions: { threshold: 0.5 } }}>
+                        {t('hero.greeting', $locale)}
+                    </h2>
+                {/key}
                 <Flex>
                     {#each socials as s}
                         <Social {...s} />
@@ -93,11 +95,12 @@
     </Stack>
 </Header>
 
+{#key $locale}
 <article>
 
 <Color>
     <Stack>
-        <TableOfContents />
+        <TableOfContents depth={3} />
     </Stack>
 </Color>
 
@@ -179,9 +182,15 @@
         </div>
 
         <Flex justify="center" style="width: 70%;">
-            <div class="sketchfab-embed-wrapper"> <iframe title="Blastech DH-17 Star Wars Blaster" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/d5f8a98ddf1f45cc8dca359c5521d5ab/embed"> </iframe> </div>
-            <div class="sketchfab-embed-wrapper"> <iframe title="Star Wars Empire Troop Transport | Andor" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/a33a4d5fceb74b929dbabb3cb5506b29/embed"> </iframe> </div>
-            <div class="sketchfab-embed-wrapper"> <iframe title="Blastech B1-NA | Star Wars Blaster" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/a815aa634beb4aba8316b5850c20a00b/embed"> </iframe> </div>
+            <div class="sketchfab-embed-wrapper"> 
+                <iframe title="Blastech DH-17 Star Wars Blaster" frameborder="0" allow="fullscreen" src="https://sketchfab.com/models/d5f8a98ddf1f45cc8dca359c5521d5ab/embed"></iframe> 
+            </div>
+            <div class="sketchfab-embed-wrapper"> 
+                <iframe title="Star Wars Empire Troop Transport | Andor" frameborder="0" allow="fullscreen" src="https://sketchfab.com/models/a33a4d5fceb74b929dbabb3cb5506b29/embed"></iframe> 
+            </div>
+            <div class="sketchfab-embed-wrapper"> 
+                <iframe title="Blastech B1-NA | Star Wars Blaster" frameborder="0" allow="fullscreen" src="https://sketchfab.com/models/a815aa634beb4aba8316b5850c20a00b/embed"></iframe> 
+            </div>
         </Flex>
         
         <h3 style="margin-top: var(--size-s6);">{t('interests.volunteeringtitle', $locale)}</h3>
@@ -190,10 +199,10 @@
         <Stack gap="s1" style="margin-top: var(--size-s3);">
             {#each volunteering as v}
                 <div>
-                    <div style="display: flex; justify-content: space-between; align-items: baseline;">
-                        <h4 style="font-size: 2rem; margin: 0;">{v.title}</h4>
-                        <span class="muted" style="font-weight: normal; font-size: 0.9rem;">{v.date}</span>
-                    </div>
+                    <Flex justify="space-between" align="center">
+                        <h4>{v.title}</h4>
+                        <small class="muted">{v.date}</small>
+                    </Flex>
                     <p class="muted">{@html t(v.description as any, $locale)}</p>
                     
                     {#if v.images && v.images.length > 0}
@@ -207,6 +216,10 @@
     </Stack>
 </Stack>
 
+<Stack>
+    <h2>{t('sections.mobility', $locale)}</h2>
+</Stack>
+
 <Color>
     <Stack>
     <h2>
@@ -216,6 +229,7 @@
 </Color>
 
 </article>
+{/key}
 
 <style>
     .header-logo {
@@ -224,5 +238,10 @@
         width: auto;
         object-fit: contain;
         min-height: 0;
+    }
+
+    h4 {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
     }
 </style>
