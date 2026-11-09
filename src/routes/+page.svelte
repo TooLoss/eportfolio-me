@@ -174,7 +174,7 @@
 
         <p>{@html t('interests.graphnet7', $locale)}</p>
 
-        <div style="width: 70%; margin: auto; margin-top: var(--size-s2)">
+        <div style="max-width: min(100%, 700px); margin: auto; margin-top: var(--size-s2)">
             <PictureGroup height="40rem" srcs={["showcase/net7-swerc.webp", "showcase/net7-cdl.webp", "showcase/net7-cdl-2.webp"]} />
         </div>
 
@@ -197,7 +197,7 @@
                     <p class="muted">{@html t(v.description as any, $locale)}</p>
                     
                     {#if v.images && v.images.length > 0}
-                        <div style="width: 70%; margin: auto; margin-top: var(--size-s2)">
+                        <div style="max-width: min(100%, 700px); margin: auto; margin-top: var(--size-s2)">
                             <PictureGroup height="20rem" srcs={v.images} />
                         </div>
                     {/if}

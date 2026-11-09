@@ -27,13 +27,13 @@
 </script>
 
 <Timeline name={t(item.name, locale)} {date} {end} {noline}>
-    <Flex wrap={false} align="center" gap="s2">
+    <Flex align="center" gap="s2">
         {#if item.img}
             <a target="_blank" href={item.url} aria-label={`Lien vers ${t(item.name, locale)}`}>
                 <img src={item.img} loading="lazy" alt="logo" style="height: 9rem;" />
             </a>
         {/if}
-        <div>
+        <div style="flex: 1; min-width: 0;">
             {#if item.description}
                 <p class="muted">{t(item.description, locale)}</p>
             {/if}
