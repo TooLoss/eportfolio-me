@@ -26,6 +26,6 @@
 	"dependencies": {
 		"@lucide/svelte": "^1.70.0",
 		"@sveltejs/adapter-static": "^4.0.1",
-		"teletype-ui": "^0.0.8"
+		"teletype-ui": "^0.1.0"
 	}
 }

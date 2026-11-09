@@ -15,8 +15,8 @@ importers:
         specifier: ^4.0.1
         version: 4.0.1(@sveltejs/kit@3.0.0(@sveltejs/vite-plugin-svelte@7.3.1(svelte@5.57.1)(vite@8.3.2))(svelte@5.57.1)(typescript@6.0.3)(vite@8.3.2))
       teletype-ui:
-        specifier: ^0.0.8
-        version: 0.0.8(svelte@5.57.1)
+        specifier: ^0.1.0
+        version: 0.1.0(svelte@5.57.1)
     devDependencies:
       '@sveltejs/kit':
         specifier: ^3.0.0
@@ -419,8 +419,8 @@ packages:
     resolution: {integrity: sha512-Uqj49lWKB+iSSnneuwiYYJ7MZgkB+eXr0LXBhv4uDuAkXqnWmq65Sxflfvp0Lc6MdKjMUxGaeOKWJqz5SNiVIA==}
     engines: {node: '>=18'}
 
-  teletype-ui@0.0.8:
-    resolution: {integrity: sha512-RacSAliGpk/lQzYYBTrrEEVFYBM8oSByt/3FrXgsxjd1dybkadyeoR1T9Avt5oewBG7bTsUkDGFLt5W5bvm3kw==}
+  teletype-ui@0.1.0:
+    resolution: {integrity: sha512-vNxaFg3VUrm6zEaLDWxVI2EdoTrb5gWBX+jZss1toURBm/emgGZHVfKzN6zsMLS8Mw5xkFX6exastWDebp4AIQ==}
     peerDependencies:
       svelte: ^5.0.0
 
@@ -790,7 +790,7 @@ snapshots:
     transitivePeerDependencies:
       - '@typescript-eslint/types'
 
-  teletype-ui@0.0.8(svelte@5.57.1):
+  teletype-ui@0.1.0(svelte@5.57.1):
     dependencies:
       '@lucide/svelte': 1.70.0(svelte@5.57.1)
       csstype: 3.2.3
