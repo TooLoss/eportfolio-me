@@ -20,15 +20,39 @@
         "name": "teletype-ui",
         "shortdesc": "A classic computer-science-inspired UI component library designed for developer portfolios, technical showcases, and minimalist web applications.",
         "url": "https://github.com/TooLoss/teletype-ui",
-        "stacks": ["Svelte"],
+        "stacks": ["Svelte", "Typescript"],
         "images": ["showcase/teletype-ui1.webp"]
     },
     {
         "id": 3,
         "name": "gravity-bot",
-        "shortdesc": "Developed in Java by a team of 9 people using the Agile/Scrum methodology, this project is a turn-based strategy and arcade video game with physics satellite. We implemented Agile methodes.",
+        "shortdesc": "Developed in Java by a team of 9 people using the Agile/Scrum methodology, this project is a turn-based strategy and arcade video game with physics satellite.",
         "url": "https://github.com/TooLoss/gravity-bot/",
-        "stacks": [""],
+        "stacks": ["Java"],
         "images": ["showcase/gravity-bot1.webp"]
+    },
+    {
+        "id": 4,
+        "name": "minishell",
+        "shortdesc": "Pure linux C shell project.",
+        "url": "https://github.com/TooLoss/minishell/",
+        "stacks": ["C"],
+        "images": ["showcase/minishell1.webp"]
+    },
+    {
+        "id": 5,
+        "name": "La Frappe",
+        "shortdesc": "Svelte application designed to centralize, organize and share past exam papers. Database custom.",
+        "url": "https://git.inpt.fr/inp-net/lafrappe",
+        "stacks": ["Svelte", "Typescript"],
+        "images": ["showcase/la-frappe1.webp"]
+    },
+    {
+        "id": 6,
+        "name": "Defis",
+        "shortdesc": "Internship projects at net7. Fullstack app with Prisma ODR. Make challenges and validations.",
+        "url": "https://git.inpt.fr/net7/stage-26-27/defis-integration-2026-2027",
+        "stacks": ["Svelte", "Typescript"],
+        "images": ["showcase/defis1.webp"]
     }
 ]
