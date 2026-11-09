@@ -50,6 +50,7 @@
                 name={project.name} 
                 description={project.description} 
                 src={project.src} 
+                stacks={project.stacks} 
                 href={`/projects/s/${project.id}`} 
                 url={project.url}
             />

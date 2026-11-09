@@ -36,7 +36,7 @@
         "name": "minishell",
         "shortdesc": "Pure linux C shell project.",
         "url": "https://github.com/TooLoss/minishell/",
-        "stacks": ["C"],
+        "stacks": ["c"],
         "images": ["showcase/minishell1.webp"]
     },
     {
