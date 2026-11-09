@@ -129,13 +129,15 @@
         <Flex>
             <Card
                 name="teletype-ui"
+                stacks={["Svelte", "TypeScript"]}
                 src="showcase/teletype-ui1.webp"
                 description="A classic computer-science-inspired UI component library designed for developer portfolios, technical showcases, and minimalist web applications." 
             />
             <Card
                 name="Entropix"
+                stacks={["C++"]}
                 src="showcase/entropix1.webp"
-                description="Entropix is a 2D grid-based particle simulation game developed in C++." 
+                description="Entropix is a 2D grid-based particle simulation game developed in C++."
             />
             <Frame style="flex-grow: 1;">
                 <Flex direction="column" justify="center" style="flex-grow: 1; height: 100%;">
@@ -223,7 +225,7 @@
 <Color>
     <Stack gap="s2">
         <Stack paddingVertical="zero" gap="s3">
-            <h2>
+            <h2 use:typewriter={{ duration: 1000, inViewOptions: { threshold: 0.5 } }}>
                 {t('sections.contacts', $locale)}
             </h2>
             <Flex>
